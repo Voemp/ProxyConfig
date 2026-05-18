@@ -20,6 +20,8 @@ payload:
   - DOMAIN-SUFFIX,wpurl.cc
   # Cloudflare
   - DOMAIN-SUFFIX,cloudflare.com
+  # Neon
+  - DOMAIN-SUFFIX,aws.neon.tech
   # Voemp
   - DOMAIN-SUFFIX,voemp.top
   # LINUX DO
@@ -28,6 +30,8 @@ payload:
   # - DOMAIN-SUFFIX,girigirilove.com
   # Deadlock
   - PROCESS-NAME,deadlock.exe
+  # PUBG
+  - PROCESS-NAME,TslGame.exe
   # FarFarWest
   - PROCESS-NAME,FarFarWest-Win64-Shipping.exe
   # MHWI
