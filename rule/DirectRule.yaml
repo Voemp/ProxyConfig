@@ -2,15 +2,7 @@
 # AUTHOR: Voemp
 # DESCRIPTION: 此规则适用于节省流量，以及修复一些禁止国外IP访问的网站与应用，应分流到DIRECT。
 payload:
-  # 无畏契约安全检查
-  - DOMAIN-SUFFIX,anticheatexpert.com
-  - DOMAIN-SUFFIX,riotcdn.net
-  - DOMAIN-SUFFIX,usertrust.com
-  - DOMAIN-SUFFIX,akamaihd.net
-  - DOMAIN-SUFFIX,trust-provider.com
-  - DOMAIN-SUFFIX,symcd.com
-  - DOMAIN-SUFFIX,gamesafe.qq.com
-  # Steam游戏下载直连
+  # Steam 游戏下载直连
   - DOMAIN-SUFFIX,steamcontent.com
   - DOMAIN-SUFFIX,eccdnx.com
   - DOMAIN-SUFFIX,clngaa.com
@@ -28,10 +20,15 @@ payload:
   - DOMAIN-SUFFIX,linux.do
   # girlgirl爱动漫
   # - DOMAIN-SUFFIX,girigirilove.com
+  # 无畏契约
+  - PROCESS-NAME,VALORANT-Win64-Shipping.exe
+  - PROCESS-NAME,AclosGameProxy.exe
   # Deadlock
   - PROCESS-NAME,deadlock.exe
   # PUBG
   - PROCESS-NAME,TslGame.exe
+  # 致命公司
+  - PROCESS-NAME,Lethal Company.exe
   # FarFarWest
   - PROCESS-NAME,FarFarWest-Win64-Shipping.exe
   # MHWI
