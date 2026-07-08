@@ -16,6 +16,8 @@ payload:
   - DOMAIN-SUFFIX,aws.neon.tech
   # Voemp
   - DOMAIN-SUFFIX,voemp.top
+  # 天工AI
+  - DOMAIN-SUFFIX,bajc-tech.com
   # LINUX DO
   - DOMAIN-SUFFIX,linux.do
   # girlgirl爱动漫
