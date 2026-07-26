@@ -6,8 +6,6 @@ payload:
   - DOMAIN-SUFFIX,steamcontent.com
   - DOMAIN-SUFFIX,eccdnx.com
   - DOMAIN-SUFFIX,clngaa.com
-  # Monster Hunter: World
-  - PROCESS-NAME,MonsterHunterWorld.exe
   # 闪链
   - DOMAIN-SUFFIX,wpurl.cc
   # Cloudflare
@@ -22,6 +20,7 @@ payload:
   - DOMAIN-SUFFIX,linux.do
   # girlgirl爱动漫
   # - DOMAIN-SUFFIX,girigirilove.com
+
   # 无畏契约
   - PROCESS-NAME,VALORANT-Win64-Shipping.exe
   - PROCESS-NAME,AclosGameProxy.exe
@@ -41,3 +40,5 @@ payload:
   - PROCESS-NAME,X6Game-Win64-Shipping.exe
   # Oopz
   - PROCESS-NAME,oopz.exe
+  # NVIDIA App
+  - PROCESS-NAME,NVIDIA App.exe
