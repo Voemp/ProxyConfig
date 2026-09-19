@@ -24,8 +24,6 @@ payload:
   # 无畏契约
   - PROCESS-NAME,VALORANT-Win64-Shipping.exe
   - PROCESS-NAME,AclosGameProxy.exe
-  # CS2
-  - PROCESS-NAME,cs2.exe
   # Deadlock
   - PROCESS-NAME,deadlock.exe
   # PUBG
