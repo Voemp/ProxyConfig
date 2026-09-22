@@ -193,7 +193,7 @@ external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-p
 
 # 代理组锚点
 SelectALL: &SelectALL
-  type: url-test
+  type: select
   proxies:
     - 自动选择
     - 香港
