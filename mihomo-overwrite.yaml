@@ -315,6 +315,9 @@ proxy-groups:
   - name: Google
     <<: *SelectProxy
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+  - name: 国际媒体
+    <<: *SelectMedia
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png
   - name: Emby
     <<: *SelectMedia
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png
@@ -324,9 +327,6 @@ proxy-groups:
   - name: Github
     <<: *SelectProxy
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
-  - name: 国际媒体
-    <<: *SelectMedia
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png
   - name: Microsoft
     <<: *SelectDirect
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
@@ -411,6 +411,9 @@ rule-providers:
   Google:
     <<: *ClassicalYaml
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+  GlobalMedia:
+    <<: *ClassicalYaml
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
   Emby:
     <<: *ClassicalYaml
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml
@@ -420,9 +423,6 @@ rule-providers:
   Github:
     <<: *ClassicalYaml
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
-  GlobalMedia:
-    <<: *ClassicalYaml
-    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
   Microsoft:
     <<: *ClassicalYaml
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
