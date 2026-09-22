@@ -160,7 +160,7 @@ tun:
 
 # 嗅探
 sniffer:
-  enable: false
+  enable: true
   force-dns-mapping: true
   parse-pure-ip: true
   override-destination: false
@@ -203,37 +203,10 @@ SelectALL: &SelectALL
     - 美国
     - 狮城
     - 其他
+    - 自建
     - DIRECT
     - REJECT
   include-all: true
-
-SelectHK: &SelectHK
-  type: select
-  proxies:
-    - 香港
-    - 自动选择
-    - 台湾
-    - 日本
-    - 英国
-    - 美国
-    - 狮城
-    - 其他
-    - DIRECT
-    - REJECT
-
-SelectTW: &SelectTW
-  type: select
-  proxies:
-    - 台湾
-    - 手动选择
-    - 香港
-    - 日本
-    - 英国
-    - 美国
-    - 狮城
-    - 其他
-    - DIRECT
-    - REJECT
 
 SelectUS: &SelectUS
   type: url-test
@@ -263,6 +236,7 @@ SelectDirect: &SelectDirect
     - 美国
     - 狮城
     - 其他
+    - 自建
     - REJECT
 
 SelectProxy: &SelectProxy
@@ -276,8 +250,20 @@ SelectProxy: &SelectProxy
     - 美国
     - 狮城
     - 其他
+    - 自建
     - DIRECT
     - REJECT
+
+FallbackAI: &FallbackAI
+  type: fallback
+  proxies:
+    - 自建
+    - 狮城
+    - 美国
+    - 日本
+  interval: 300
+  tolerance: 50
+  url: "https://www.gstatic.com/generate_204"
 
 UrlTest: &UrlTest
   type: url-test
@@ -302,22 +288,22 @@ proxy-groups:
   - name: 手动选择
     <<: *SelectALL
     include-all: true
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
   - name: OpenAI
-    <<: *SelectProxy
+    <<: *FallbackAI
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
   - name: Claude
-    <<: *SelectProxy
+    <<: *FallbackAI
     icon: https://testingcf.jsdelivr.net/gh/Voemp/ProxyConfig@main/icon/Claude.png
   - name: Gemini
-    <<: *SelectProxy
-    icon: https://testingcf.jsdelivr.net/gh/guaishouxiaoqi/icons@master/Color/Gemini.png
+    <<: *FallbackAI
+    icon: https://testingcf.jsdelivr.net/gh/Voemp/ProxyConfig@main/icon/Gemini.png
   - name: Google
     <<: *SelectProxy
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
   - name: 国际媒体
     <<: *SelectMedia
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
   - name: Emby
     <<: *SelectMedia
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png
@@ -379,11 +365,15 @@ proxy-groups:
   - name: 其他
     <<: *UrlTest
     filter: "(?i)^(?!.*(香港|台湾|日本|新加坡|狮城|英国|美国|港|台|日|新|英|美|hk|tw|jp|sg|uk|us)).*"
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Area.png
   - name: 节流
     <<: *UrlTest
     filter: "自建|流媒体|0.1x"
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/mini/x0.1.png
+  - name: 自建
+    <<: *UrlTest
+    filter: "自建"
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
 
 # 规则 Provider
 rule-anchor:
