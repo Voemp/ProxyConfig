@@ -3,7 +3,6 @@
 # DESCRIPTION: Gemini 相关分流
 payload:
   - DOMAIN,ai.google.dev
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com
   - DOMAIN,makersuite.google.com
   - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN-SUFFIX,deepmind.com
@@ -11,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,gemini.google.com
   - DOMAIN-SUFFIX,gemini.gstatic.com
   - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN-SUFFIX,clients6.google.com
   - DOMAIN-SUFFIX,daily-cloudcode-pa.googleapis.com
   - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,apis.google.com
@@ -19,3 +19,4 @@ payload:
   - DOMAIN-KEYWORD,colab
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,generativelanguage
+  - PROCESS-NAME,agy.exe
