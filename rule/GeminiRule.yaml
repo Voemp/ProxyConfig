@@ -11,8 +11,11 @@ payload:
   - DOMAIN-SUFFIX,gemini.google.com
   - DOMAIN-SUFFIX,gemini.gstatic.com
   - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN-SUFFIX,daily-cloudcode-pa.googleapis.com
   - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,apis.google.com
+  - DOMAIN-KEYWORD,gemini
+  - DOMAIN-KEYWORD,antigravity
   - DOMAIN-KEYWORD,colab
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,generativelanguage
