@@ -397,7 +397,7 @@ rule-providers:
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml
   Gemini:
     <<: *ClassicalYaml
-    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Voemp/ProxyConfig/main/rule/GeminiRule.yaml
   Google:
     <<: *ClassicalYaml
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
