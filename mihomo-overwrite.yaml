@@ -254,13 +254,13 @@ SelectProxy: &SelectProxy
     - DIRECT
     - REJECT
 
-FallbackAI: &FallbackAI
-  type: fallback
+SelectAI: &SelectAI
+  type: select
   proxies:
     - 自建
+    - 集美
     - 狮城
     - 美国
-    - 日本
   interval: 300
   tolerance: 50
   url: "https://www.gstatic.com/generate_204"
@@ -290,13 +290,13 @@ proxy-groups:
     include-all: true
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
   - name: OpenAI
-    <<: *FallbackAI
+    <<: *SelectAI
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
   - name: Claude
-    <<: *FallbackAI
+    <<: *SelectAI
     icon: https://testingcf.jsdelivr.net/gh/Voemp/ProxyConfig@main/icon/Claude.png
   - name: Gemini
-    <<: *FallbackAI
+    <<: *SelectAI
     icon: https://testingcf.jsdelivr.net/gh/Voemp/ProxyConfig@main/icon/Gemini.png
   - name: Google
     <<: *SelectProxy
@@ -374,6 +374,10 @@ proxy-groups:
     <<: *UrlTest
     filter: "自建"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
+  - name: 集美
+    <<: *Fallback
+    filter: "自建"
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png
 
 # 规则 Provider
 rule-anchor:
