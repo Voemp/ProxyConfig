@@ -1,7 +1,7 @@
 # ============================================================
 # @ConfigName        Voemp 自用 Mihomo 覆写
 # @Author            @Voemp
-# @UpdateTime        2026/09/22
+# @UpdateTime        2026/10/15
 # ============================================================
 
 # 通用配置
@@ -376,7 +376,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
   - name: 集美
     <<: *Fallback
-    filter: "自建"
+    filter: "(?=.*花云)(?=.*美国).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png
 
 # 规则 Provider
