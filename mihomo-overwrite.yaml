@@ -1,7 +1,7 @@
 # ============================================================
 # @ConfigName        Voemp 自用 Mihomo 覆写
 # @Author            @Voemp
-# @UpdateTime        2026/10/15
+# @UpdateTime        2026/09/22
 # ============================================================
 
 # 通用配置
@@ -257,8 +257,8 @@ SelectProxy: &SelectProxy
 SelectAI: &SelectAI
   type: select
   proxies:
+    - AI专线
     - 自建
-    - 集美
     - 狮城
     - 美国
   interval: 300
@@ -340,31 +340,31 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
   - name: 香港
     <<: *UrlTest
-    filter: "🇭🇰|香港|港|HK|hongkong|hong kong"
+    filter: "(?i)^(?!.*AI)(?=.*(🇭🇰|香港|港|HK|hongkong|hong kong)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
   - name: 台湾
     <<: *UrlTest
-    filter: "🇹🇼|台湾|台|TW|taiwan|taipei"
+    filter: "(?i)^(?!.*AI)(?=.*(🇹🇼|台湾|台|TW|taiwan|taipei)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
   - name: 日本
     <<: *UrlTest
-    filter: "🇯🇵|日本|JP|japan|tokyo|osaka"
+    filter: "(?i)^(?!.*AI)(?=.*(🇯🇵|日本|JP|japan|tokyo|osaka)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
   - name: 英国
     <<: *UrlTest
-    filter: "🇬🇧|英国|英|UK|united kingdom|london"
+    filter: "(?i)^(?!.*AI)(?=.*(🇬🇧|英国|英|UK|united kingdom|london)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png
   - name: 美国
     <<: *UrlTest
-    filter: "🇺🇸|美国|美|US|united states|america|los angeles|san jose|silicon valley"
+    filter: "(?i)^(?!.*AI)(?=.*(🇺🇸|美国|美|US|united states|america|los angeles|san jose|silicon valley)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
   - name: 狮城
     <<: *UrlTest
-    filter: "🇸🇬|新加坡|新|狮城|SG|singapore"
+    filter: "(?i)^(?!.*AI)(?=.*(🇸🇬|新加坡|新|狮城|SG|singapore)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
   - name: 其他
     <<: *UrlTest
-    filter: "(?i)^(?!.*(香港|台湾|日本|新加坡|狮城|英国|美国|港|台|日|新|英|美|hk|tw|jp|sg|uk|us)).*"
+    filter: "(?i)^(?!.*(香港|台湾|日本|新加坡|狮城|英国|美国|港|台|日|新|英|美|hk|tw|jp|sg|uk|us|AI)).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Area.png
   - name: 节流
     <<: *UrlTest
@@ -374,9 +374,9 @@ proxy-groups:
     <<: *UrlTest
     filter: "自建"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
-  - name: 集美
+  - name: AI专线
     <<: *Fallback
-    filter: "(?=.*花云)(?=.*美国).*"
+    filter: "(?=.*AI)(?=.*美国).*"
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png
 
 # 规则 Provider
